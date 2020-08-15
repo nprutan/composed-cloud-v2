@@ -128,29 +128,29 @@ class MobileContainer extends Component {
             visible={sidebarOpened}
           >
             <Link href='/'>
-                  <Menu.Item as='a'>
-                    Home
-                  </Menu.Item>
-                </Link>
-                <Link href='/contact'>
-                  <Menu.Item as='a'>Contact</Menu.Item>
-                </Link>
-                <Link href='/about'>
-                  <Menu.Item as='a' active>About</Menu.Item>
-                </Link>
-                <Link href='/fraudhooks'>
-                  <Menu.Item as='a'>FraudHooks</Menu.Item>
-                </Link>
-                <Link href='/hubmetrix'>
-                  <Menu.Item as='a'>Hubmetrix</Menu.Item>
-                </Link>
+                <Menu.Item as='a'>
+                Home
+                </Menu.Item>
+            </Link>
+            <Link href='/contact'>
+                <Menu.Item as='a'>Contact</Menu.Item>
+            </Link>
+            <Link href='/about'>
+                <Menu.Item as='a' active>About</Menu.Item>
+            </Link>
+            <Link href='/fraudhooks'>
+                <Menu.Item as='a'>FraudHooks</Menu.Item>
+            </Link>
+            <Link href='/hubmetrix'>
+                <Menu.Item as='a'>Hubmetrix</Menu.Item>
+            </Link>
           </Sidebar>
 
           <Sidebar.Pusher dimmed={sidebarOpened}>
             <Segment
               inverted
               textAlign='center'
-              style={{ minHeight: 350, padding: '1em 0em' }}
+              style={{ minHeight: 50, padding: '1em 0em' }}
               vertical
             >
               <Container>
@@ -158,14 +158,6 @@ class MobileContainer extends Component {
                   <Menu.Item onClick={this.handleToggle}>
                     <Icon name='sidebar' />
                   </Menu.Item>
-                  {/* <Menu.Item position='right'>
-                    <Button as='a' inverted>
-                      Log in
-                    </Button>
-                    <Button as='a' inverted style={{ marginLeft: '0.5em' }}>
-                      Sign Up
-                    </Button>
-                  </Menu.Item> */}
                 </Menu>
               </Container>
               <HomepageHeading mobile />
