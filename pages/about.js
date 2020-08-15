@@ -26,14 +26,14 @@ const { MediaContextProvider, Media } = createMedia({
 })
 
 /* Heads up!
- * HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled
+ * AboutHeading uses inline styling, however it's not the best practice. Use CSS or styled
  * components for such things.
  */
-const HomepageHeading = ({ mobile }) => (
+const AboutHeading = ({ mobile }) => (
     <></>  
 )
 
-HomepageHeading.propTypes = {
+AboutHeading.propTypes = {
   mobile: PropTypes.bool,
 }
 
@@ -91,7 +91,7 @@ class DesktopContainer extends Component {
                 </Link> */}
               </Container>
             </Menu>
-            <HomepageHeading />
+            <AboutHeading />
           </Segment>
         </Visibility>
 
@@ -160,7 +160,7 @@ class MobileContainer extends Component {
                   </Menu.Item>
                 </Menu>
               </Container>
-              <HomepageHeading mobile />
+              <AboutHeading mobile />
             </Segment>
 
             {children}
