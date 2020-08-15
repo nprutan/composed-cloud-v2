@@ -86,9 +86,9 @@ class DesktopContainer extends Component {
                 <Link href='/fraudhooks'>
                   <Menu.Item as='a'>FraudHooks</Menu.Item>
                 </Link>
-                <Link href='/hubmetrix'>
+                {/* <Link href='/hubmetrix'>
                   <Menu.Item as='a'>Hubmetrix</Menu.Item>
-                </Link>
+                </Link> */}
               </Container>
             </Menu>
             <HomepageHeading />

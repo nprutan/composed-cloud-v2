@@ -26,14 +26,14 @@ const { MediaContextProvider, Media } = createMedia({
 })
 
 /* Heads up!
- * HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled
+ * FraudHooksHeading uses inline styling, however it's not the best practice. Use CSS or styled
  * components for such things.
  */
-const HomepageHeading = ({ mobile }) => (
+const FraudHooksHeading = ({ mobile }) => (
     <Image fluid verticalAlign='middle' src='/FraudHooks_banner_cropped.png'></Image>
 )
 
-HomepageHeading.propTypes = {
+FraudHooksHeading.propTypes = {
   mobile: PropTypes.bool,
 }
 
@@ -86,12 +86,12 @@ class DesktopContainer extends Component {
                 <Link href='/fraudhooks'>
                   <Menu.Item as='a' active>FraudHooks</Menu.Item>
                 </Link>
-                <Link href='/hubmetrix'>
+                {/* <Link href='/hubmetrix'>
                   <Menu.Item as='a'>Hubmetrix</Menu.Item>
-                </Link>
+                </Link> */}
               </Container>
             </Menu>
-            <HomepageHeading />
+            <FraudHooksHeading />
           </Segment>
         </Visibility>
 
@@ -168,7 +168,7 @@ class MobileContainer extends Component {
                   </Menu.Item> */}
                 </Menu>
               </Container>
-              <HomepageHeading mobile />
+              <FraudHooksHeading mobile />
             </Segment>
 
             {children}
