@@ -30,7 +30,7 @@ const { MediaContextProvider, Media } = createMedia({
  * components for such things.
  */
 const HomepageHeading = ({ mobile }) => (
-  <Image fluid src='/ComposedCloud_banner_alt.png'></Image>
+    <></>  
 )
 
 HomepageHeading.propTypes = {
@@ -72,8 +72,8 @@ class DesktopContainer extends Component {
               size='large'
             >
               <Container>
-              <Link href='/'>
-                  <Menu.Item as='a' active>
+                <Link href='/'>
+                  <Menu.Item as='a'>
                     Home
                   </Menu.Item>
                 </Link>
@@ -81,7 +81,7 @@ class DesktopContainer extends Component {
                   <Menu.Item as='a'>Contact</Menu.Item>
                 </Link>
                 <Link href='/about'>
-                  <Menu.Item as='a'>About</Menu.Item>
+                  <Menu.Item as='a' active>About</Menu.Item>
                 </Link>
                 <Link href='/fraudhooks'>
                   <Menu.Item as='a'>FraudHooks</Menu.Item>
@@ -127,13 +127,23 @@ class MobileContainer extends Component {
             vertical
             visible={sidebarOpened}
           >
-            <Menu.Item as='a' active>
-                  Home
-              </Menu.Item>
-              <Menu.Item as='a'>Contact</Menu.Item>
-              <Menu.Item as='a'>About</Menu.Item>
-              <Menu.Item as='a'>FraudHooks</Menu.Item>
-              <Menu.Item as='a'>Hubmetrix</Menu.Item>
+            <Link href='/'>
+                  <Menu.Item as='a'>
+                    Home
+                  </Menu.Item>
+                </Link>
+                <Link href='/contact'>
+                  <Menu.Item as='a'>Contact</Menu.Item>
+                </Link>
+                <Link href='/about'>
+                  <Menu.Item as='a' active>About</Menu.Item>
+                </Link>
+                <Link href='/fraudhooks'>
+                  <Menu.Item as='a'>FraudHooks</Menu.Item>
+                </Link>
+                <Link href='/hubmetrix'>
+                  <Menu.Item as='a'>Hubmetrix</Menu.Item>
+                </Link>
           </Sidebar>
 
           <Sidebar.Pusher dimmed={sidebarOpened}>
@@ -191,71 +201,54 @@ ResponsiveContainer.propTypes = {
 const HomepageLayout = () => (
   <ResponsiveContainer>
     <Segment style={{ padding: '8em 0em' }} vertical>
-      <Grid container stackable verticalAlign='middle'>
-        <Grid.Row>
-          <Grid.Column width={8}>
+        <Container text>
             <Header as='h3' style={{ fontSize: '2em', color: '#5e5c5c' }}>
-            <Icon name='cloud upload' size='large' /> Cloud Integrations
+                What's the story with Composed Cloud?
             </Header>
-            <p style={{ fontSize: '1.33em' }}>
-              We do cloud integrations, and we really like microservices.
-              How about an event-driven architecture? We've got you covered.
-              Or a custom embedded Shopify app? Let's go.
+            <Divider />
+            <p style={{ fontSize: '1.33em', color: '#5e5c5c' }}>
+                Composed Cloud Solutions is a software development company based in Denver, Colorado.
+                Prior to starting Composed Cloud in 2017, Nate Rutan was a cofounder of a successful medical manufacturing startup
+                in the sleep industry.
             </p>
-          </Grid.Column>
-          <Grid.Column floated='right' width={8}>
-          <Header as='h3' style={{ fontSize: '2em', color: '#5e5c5c' }}>
-              <Icon name='box' size='large' /> Ecommerce Apps
-            </Header>
-            <p style={{ fontSize: '1.33em' }}>
-              We make clean and useful ecommerce apps for platforms like Shopify, BigCommerce and Volusion. 
-              Let us know what you've got in mind.
+            <p style={{ fontSize: '1.33em', color: '#5e5c5c' }}>
+                Founded in 2009, that company went on to gross over 12 million dollars during his tenure. 
+                Nate’s background includes a B.S. in Computer Information Systems and an M.A. in Historical Theology. 
+                A strange mix for sure, but one that informs a unique outlook on the world of technology.
             </p>
-            {/* <Image bordered rounded size='large' src='/images/wireframe/white-image.png' /> */}
-          </Grid.Column>
-        </Grid.Row>
-        <Divider hidden />
-        <Grid.Row>
-        <Grid.Column floated='left' width={8}>
-          <Header as='h3' style={{ fontSize: '2em', color: '#5e5c5c' }}>
-          <Icon name='wrench' size='large' />System Maintenance
-            </Header>
-            <p style={{ fontSize: '1.33em' }}>
-              Have a legacy system that needs some love and attention? 
-              We'll maintain it for you. Get in touch and we can chat about requirements.
+            <p style={{ fontSize: '1.33em', color: '#5e5c5c' }}>
+                Going way back, Nate is a bit of an OG in the tech world. 
+                His first computer was a big beige box that ran a processor that nowadays most people have probably never heard of. 
+                He used to take these boxes apart and install stuff in them.
+                Installing lots of stuff in these boxes was the way that people hand-rolled their own tech stack back in those days. 
             </p>
-            {/* <Image bordered rounded size='large' src='/images/wireframe/white-image.png' /> */}
-          </Grid.Column>
-          <Grid.Column floated='right' width={8}>
-          <Header as='h3' style={{ fontSize: '2em', color: '#5e5c5c' }}>
-          <Icon name='code branch' size='large' />Custom Code
-            </Header>
-            <p style={{ fontSize: '1.33em' }}>
-              Need some help with your Python or JS project?
-              Let us take a look at that repo.
+            <p style={{ fontSize: '1.33em', color: '#5e5c5c' }}>
+                Nate has seen lots of versions of Windows, MacOs and Ubuntu, too many really, and he’s been handy on the *nix command line 
+                for more than a decade. Actually more like a decade and six years, but who’s counting? I guess it's almost been two now.
+                Was anybody prepared for 2020?
             </p>
-            {/* <Image bordered rounded size='large' src='/images/wireframe/white-image.png' /> */}
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
-    </Segment>
-
-    <Segment style={{ padding: '8em 0em' }} vertical>
-      <Container text>
-        <Header as='h3' style={{ fontSize: '2em', color: '#5e5c5c' }}>
-          BTW, We Specialize In <Icon name='aws' size='massive'/> Integrations
-        </Header>
-        <p style={{ fontSize: '1.33em', color: '#5e5c5c' }}>
-          If you've got some systems that need to talk, and they've 
-          got APIs with good documentation, we can easily hook them up.
-          We'll probably use Chalice and Python, or the Amplify framework 
-          with a GraphQL backend.
-          We're kinda like a systems matchmaker.
-          But we use code and it's not exciting to talk about at parties.
-          We promise you'll be excited about how it'll transform your business though.
-          
-        </p>
-      </Container>
+            <p style={{ fontSize: '1.33em', color: '#5e5c5c' }}>
+                Nate began working as a developer in 2012. He started with Python, moved on to Node.js, 
+                then found his way into Java, and finally C#. After that long arc, he has now realized how much he truly loves Python and uses
+                it whenever and wherever he can. He’s found hours of inspiration from people like Raymond Hettinger, James Powell, Alex Martelli, 
+                BDFL, Keneth Reitz, Luciano Ramalho, Jon Skeet, K. Scott Allen, Robert Smallshire and countless others. 
+            </p>
+            <p style={{ fontSize: '1.33em', color: '#5e5c5c' }}>
+                He’s got a growing collection of Kindle books on various languages, but the one he reads more than others is Fluent Python by Luciano Ramalho. 
+                He’s also thinking of giving Go a shot sometime soon, but will keep loving Python anyway because he is a loyal person and wouldn’t want Python 
+                to feel bad.
+            </p>
+            <p style={{ fontSize: '1.33em', color: '#5e5c5c' }}>
+                Here at Composed Cloud Solutions, we love the cloud, but we have a particular fondness for AWS. 
+                But we are always curious and passionate about new technologies. We learn everyday. 
+                We are always on the lookout for new and interesting projects. 
+                Nate likes to watch core Python developers give talks on YouTube when he should probably be sleeping. But that’s another story. 
+            </p>
+            <p style={{ fontSize: '1.33em', color: '#5e5c5c' }}>
+                The point is that we really like to learn new things, and we are excited about using those things to help business
+                with the things they are excited about.
+            </p>
+        </Container>
     </Segment>
 
     <Segment inverted vertical style={{ padding: '5em 0em' }}>

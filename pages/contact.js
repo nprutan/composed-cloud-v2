@@ -30,7 +30,7 @@ const { MediaContextProvider, Media } = createMedia({
  * components for such things.
  */
 const HomepageHeading = ({ mobile }) => (
-  <Image fluid src='/ComposedCloud_banner_alt.png'></Image>
+    <></>  
 )
 
 HomepageHeading.propTypes = {
@@ -72,13 +72,13 @@ class DesktopContainer extends Component {
               size='large'
             >
               <Container>
-              <Link href='/'>
-                  <Menu.Item as='a' active>
+                <Link href='/'>
+                  <Menu.Item as='a'>
                     Home
                   </Menu.Item>
                 </Link>
                 <Link href='/contact'>
-                  <Menu.Item as='a'>Contact</Menu.Item>
+                  <Menu.Item as='a' active>Contact</Menu.Item>
                 </Link>
                 <Link href='/about'>
                   <Menu.Item as='a'>About</Menu.Item>
@@ -127,13 +127,23 @@ class MobileContainer extends Component {
             vertical
             visible={sidebarOpened}
           >
-            <Menu.Item as='a' active>
-                  Home
-              </Menu.Item>
-              <Menu.Item as='a'>Contact</Menu.Item>
-              <Menu.Item as='a'>About</Menu.Item>
-              <Menu.Item as='a'>FraudHooks</Menu.Item>
-              <Menu.Item as='a'>Hubmetrix</Menu.Item>
+            <Link href='/'>
+                  <Menu.Item as='a'>
+                    Home
+                  </Menu.Item>
+                </Link>
+                <Link href='/contact'>
+                  <Menu.Item as='a' active>Contact</Menu.Item>
+                </Link>
+                <Link href='/about'>
+                  <Menu.Item as='a'>About</Menu.Item>
+                </Link>
+                <Link href='/fraudhooks'>
+                  <Menu.Item as='a'>FraudHooks</Menu.Item>
+                </Link>
+                <Link href='/hubmetrix'>
+                  <Menu.Item as='a'>Hubmetrix</Menu.Item>
+                </Link>
           </Sidebar>
 
           <Sidebar.Pusher dimmed={sidebarOpened}>
@@ -191,71 +201,40 @@ ResponsiveContainer.propTypes = {
 const HomepageLayout = () => (
   <ResponsiveContainer>
     <Segment style={{ padding: '8em 0em' }} vertical>
+        <Container text>
+            <Header as='h3' style={{ fontSize: '2em', color: '#5e5c5c' }}>
+                <Icon name='sound' size='massive'/>Contact Us
+            </Header>
+            <p style={{ fontSize: '1.33em', color: '#5e5c5c' }}>
+            ‪   (720) 588-8572‬
+            </p>
+            <p style={{ fontSize: '1.33em', color: '#5e5c5c' }}>
+                Please feel free to reach out any time!
+            </p>
+        </Container>
+    </Segment>
+    <Segment style={{ padding: '8em 0em' }} vertical>
       <Grid container stackable verticalAlign='middle'>
         <Grid.Row>
           <Grid.Column width={8}>
             <Header as='h3' style={{ fontSize: '2em', color: '#5e5c5c' }}>
-            <Icon name='cloud upload' size='large' /> Cloud Integrations
+            <Icon name='envelope outline' size='large' /> General Contact
             </Header>
             <p style={{ fontSize: '1.33em' }}>
-              We do cloud integrations, and we really like microservices.
-              How about an event-driven architecture? We've got you covered.
-              Or a custom embedded Shopify app? Let's go.
+              info@composedcloud.com
             </p>
           </Grid.Column>
           <Grid.Column floated='right' width={8}>
           <Header as='h3' style={{ fontSize: '2em', color: '#5e5c5c' }}>
-              <Icon name='box' size='large' /> Ecommerce Apps
+              <Icon name='box' size='large' /> Support for FraudHooks
             </Header>
             <p style={{ fontSize: '1.33em' }}>
-              We make clean and useful ecommerce apps for platforms like Shopify, BigCommerce and Volusion. 
-              Let us know what you've got in mind.
-            </p>
-            {/* <Image bordered rounded size='large' src='/images/wireframe/white-image.png' /> */}
-          </Grid.Column>
-        </Grid.Row>
-        <Divider hidden />
-        <Grid.Row>
-        <Grid.Column floated='left' width={8}>
-          <Header as='h3' style={{ fontSize: '2em', color: '#5e5c5c' }}>
-          <Icon name='wrench' size='large' />System Maintenance
-            </Header>
-            <p style={{ fontSize: '1.33em' }}>
-              Have a legacy system that needs some love and attention? 
-              We'll maintain it for you. Get in touch and we can chat about requirements.
-            </p>
-            {/* <Image bordered rounded size='large' src='/images/wireframe/white-image.png' /> */}
-          </Grid.Column>
-          <Grid.Column floated='right' width={8}>
-          <Header as='h3' style={{ fontSize: '2em', color: '#5e5c5c' }}>
-          <Icon name='code branch' size='large' />Custom Code
-            </Header>
-            <p style={{ fontSize: '1.33em' }}>
-              Need some help with your Python or JS project?
-              Let us take a look at that repo.
+              support@composedcloud.com
             </p>
             {/* <Image bordered rounded size='large' src='/images/wireframe/white-image.png' /> */}
           </Grid.Column>
         </Grid.Row>
       </Grid>
-    </Segment>
-
-    <Segment style={{ padding: '8em 0em' }} vertical>
-      <Container text>
-        <Header as='h3' style={{ fontSize: '2em', color: '#5e5c5c' }}>
-          BTW, We Specialize In <Icon name='aws' size='massive'/> Integrations
-        </Header>
-        <p style={{ fontSize: '1.33em', color: '#5e5c5c' }}>
-          If you've got some systems that need to talk, and they've 
-          got APIs with good documentation, we can easily hook them up.
-          We'll probably use Chalice and Python, or the Amplify framework 
-          with a GraphQL backend.
-          We're kinda like a systems matchmaker.
-          But we use code and it's not exciting to talk about at parties.
-          We promise you'll be excited about how it'll transform your business though.
-          
-        </p>
-      </Container>
     </Segment>
 
     <Segment inverted vertical style={{ padding: '5em 0em' }}>

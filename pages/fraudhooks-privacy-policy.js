@@ -29,13 +29,13 @@ const { MediaContextProvider, Media } = createMedia({
  * HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled
  * components for such things.
  */
-const HomepageHeading = ({ mobile }) => (
-  <Image fluid src='/ComposedCloud_banner_alt.png'></Image>
-)
+// const HomepageHeading = ({ mobile }) => (
+//   <></>
+// )
 
-HomepageHeading.propTypes = {
-  mobile: PropTypes.bool,
-}
+// HomepageHeading.propTypes = {
+//   mobile: PropTypes.bool,
+// }
 
 /* Heads up!
  * Neither Semantic UI nor Semantic UI React offer a responsive navbar, however, it can be implemented easily.
@@ -72,8 +72,8 @@ class DesktopContainer extends Component {
               size='large'
             >
               <Container>
-              <Link href='/'>
-                  <Menu.Item as='a' active>
+                <Link href='/'>
+                  <Menu.Item as='a'>
                     Home
                   </Menu.Item>
                 </Link>
@@ -91,7 +91,7 @@ class DesktopContainer extends Component {
                 </Link>
               </Container>
             </Menu>
-            <HomepageHeading />
+            {/* <HomepageHeading /> */}
           </Segment>
         </Visibility>
 
@@ -158,7 +158,7 @@ class MobileContainer extends Component {
                   </Menu.Item> */}
                 </Menu>
               </Container>
-              <HomepageHeading mobile />
+              {/* <HomepageHeading mobile /> */}
             </Segment>
 
             {children}
@@ -191,69 +191,68 @@ ResponsiveContainer.propTypes = {
 const HomepageLayout = () => (
   <ResponsiveContainer>
     <Segment style={{ padding: '8em 0em' }} vertical>
-      <Grid container stackable verticalAlign='middle'>
-        <Grid.Row>
-          <Grid.Column width={8}>
-            <Header as='h3' style={{ fontSize: '2em', color: '#5e5c5c' }}>
-            <Icon name='cloud upload' size='large' /> Cloud Integrations
-            </Header>
-            <p style={{ fontSize: '1.33em' }}>
-              We do cloud integrations, and we really like microservices.
-              How about an event-driven architecture? We've got you covered.
-              Or a custom embedded Shopify app? Let's go.
-            </p>
-          </Grid.Column>
-          <Grid.Column floated='right' width={8}>
-          <Header as='h3' style={{ fontSize: '2em', color: '#5e5c5c' }}>
-              <Icon name='box' size='large' /> Ecommerce Apps
-            </Header>
-            <p style={{ fontSize: '1.33em' }}>
-              We make clean and useful ecommerce apps for platforms like Shopify, BigCommerce and Volusion. 
-              Let us know what you've got in mind.
-            </p>
-            {/* <Image bordered rounded size='large' src='/images/wireframe/white-image.png' /> */}
-          </Grid.Column>
-        </Grid.Row>
-        <Divider hidden />
-        <Grid.Row>
-        <Grid.Column floated='left' width={8}>
-          <Header as='h3' style={{ fontSize: '2em', color: '#5e5c5c' }}>
-          <Icon name='wrench' size='large' />System Maintenance
-            </Header>
-            <p style={{ fontSize: '1.33em' }}>
-              Have a legacy system that needs some love and attention? 
-              We'll maintain it for you. Get in touch and we can chat about requirements.
-            </p>
-            {/* <Image bordered rounded size='large' src='/images/wireframe/white-image.png' /> */}
-          </Grid.Column>
-          <Grid.Column floated='right' width={8}>
-          <Header as='h3' style={{ fontSize: '2em', color: '#5e5c5c' }}>
-          <Icon name='code branch' size='large' />Custom Code
-            </Header>
-            <p style={{ fontSize: '1.33em' }}>
-              Need some help with your Python or JS project?
-              Let us take a look at that repo.
-            </p>
-            {/* <Image bordered rounded size='large' src='/images/wireframe/white-image.png' /> */}
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
-    </Segment>
-
-    <Segment style={{ padding: '8em 0em' }} vertical>
       <Container text>
         <Header as='h3' style={{ fontSize: '2em', color: '#5e5c5c' }}>
-          BTW, We Specialize In <Icon name='aws' size='massive'/> Integrations
+          FraudHooks Privacy Policy
         </Header>
         <p style={{ fontSize: '1.33em', color: '#5e5c5c' }}>
-          If you've got some systems that need to talk, and they've 
-          got APIs with good documentation, we can easily hook them up.
-          We'll probably use Chalice and Python, or the Amplify framework 
-          with a GraphQL backend.
-          We're kinda like a systems matchmaker.
-          But we use code and it's not exciting to talk about at parties.
-          We promise you'll be excited about how it'll transform your business though.
-          
+        <p>FraudHooks "the App” provides auto cancelling, restocking and refunding of fraudulent Shopify orders "the Service" to merchants who use Shopify to power their stores.  
+            This FraudHooks Privacy Policy describes how personal information is collected, used, and shared when you install or use the App in connection with your Shopify-supported store.</p>
+        <p>Personal Information the App Collects</p>
+        <p>When you install the App, we are automatically able to access certain types of information from your Shopify account:
+        Customers, Fulfillments, Orders</p>
+        <p>
+        Additionally, we collect the following types of personal information from you and/or your customers once you have installed the App:
+        Information about you and others who may access the App on behalf of your store, such as your name, address, email address, phone number, and billing information;
+        We are not currently storing any information about individuals who visit your store, such as their IP address, web browser details, time zone, and information about the cookies installed on the particular device.
+        We only collect a minimal amount of information related to FraudHooks settings such as:
+        shopOrigin
+        token
+        appActive
+        notifyOwner
+        ownerEmail
+        notifyCustomer
+        actionOnFraud
+        fraudScore
+        riskLevel
+        lastHookId
+        lastHookTime
+        lastHookOrderId
+        lastHookRegion
+        </p>
+        <p>We collect personal information directly from the relevant individual, through your Shopify account, or using the following technologies:
+        “Cookies” are data files that are placed on your device or computer and often include an anonymous unique identifier. For more information about cookies, and how to disable cookies, visit <a href="http://www.allaboutcookies.org">http://www.allaboutcookies.org</a>.
+        “Log files” track actions occurring on the Site, and collect data including your IP address, browser type, Internet service provider, referring/exit pages, and date/time stamps.
+        “Web beacons,” “tags,” and “pixels” are electronic files used to record information about how you browse the Site.
+        </p>
+        <p>How Do We Use Your Personal Information?</p>
+        <p>We use the personal information we collect from you and your customers in order to provide the Service and to operate the App.  [[ADD IF RELEVANT]]Additionally, we use this personal information to:
+        Communicate with you;
+        Optimize or improve the App; and
+        Provide you with information or advertising relating to our products or services.
+        </p>
+        <p>Sharing Your Personal Information</p>
+        <p></p>
+        <p>Finally, we may also share your Personal Information to comply with applicable laws and regulations, to respond to a subpoena, search warrant or other lawful request for information we receive, or to otherwise protect our rights.</p>
+        <p>
+        Behavioural Advertising
+        As described above, we use your Personal Information to provide you with targeted advertisements or marketing communications we believe may be of interest to you.  For more information about how targeted advertising works, you can visit the Network Advertising Initiative’s (“NAI”) educational page at <a href="http://www.networkadvertising.org/understanding-online-advertising/how-does-it-work">http://www.networkadvertising.org/understanding-online-advertising/how-does-it-work</a>.</p>
+        <p>You can opt out of targeted advertising by:  
+        Additionally, you can opt out of some of these services by visiting the Digital Advertising Alliance’s opt-out portal at:  <a href="http://optout.aboutads.info/">http://optout.aboutads.info/</a>.</p>
+        <p>
+        Your Rights
+        If you are a European resident, you have the right to access personal information we hold about you and to ask that your personal information be corrected, updated, or deleted. If you would like to exercise this right, please contact us through the contact information below.</p>
+        <p>Additionally, if you are a European resident we note that we are processing your information in order to fulfill contracts we might have with you (for example if you make an order through the Site), or otherwise to pursue our legitimate business interests listed above.  Additionally, please note that your information will be transferred outside of Europe, including to Canada and the United States.</p>
+        <p></p>
+        <p>Data Retention
+        When you place an order through the Site, we will maintain your Order Information for our records unless and until you ask us to delete this information.</p>
+        Currently we are not storing any records related to orders, customers or fulfillments. We only process this information and then drop after processing.
+        <p>Changes
+        We may update this FraudHooks Privacy Policy from time to time in order to reflect, for example, changes to our practices or for other operational, legal or regulatory reasons.</p>
+        <p>Contact Us
+        For more information about our privacy practices, if you have questions, or if you would like to make a complaint, please contact us by e-mail at support@composedcloud.com or by mail using the details provided below:</p>
+        <p>121 S. Tejon Street, Suite 900 
+          Colorado Springs, CO  80903</p>
         </p>
       </Container>
     </Segment>
@@ -265,9 +264,7 @@ const HomepageLayout = () => (
             <Grid.Column width={3}>
               <Header inverted as='h4' content='About' />
               <List link inverted>
-                <Link href='/contact'>
-                    <List.Item as='a'>Contact Us</List.Item>
-                </Link>
+                <List.Item as='a'>Contact Us</List.Item>
                 <Link href='/fraudhooks-privacy-policy'>
                   <List.Item as='a'>FraudHooks Privacy Policy</List.Item>
                 </Link>
