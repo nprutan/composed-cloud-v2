@@ -269,7 +269,7 @@ const HomepageLayout = () => (
     <Segment style={{ padding: '8em 0em' }} vertical>
       <Container text>
         <Header as='h3' style={{ fontSize: '2em', color: '#5e5c5c' }}>
-          <Icon name='aws' size='question circle'/>FAQs
+          <Icon name='question circle' size='large'/>FAQs
         </Header>
         <p id='FAQs' style={{ fontSize: '1.33em', color: '#5e5c5c' }}>
         <List as='ol'>
