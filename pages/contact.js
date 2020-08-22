@@ -201,6 +201,9 @@ const HomepageLayout = () => (
             ‪   (720) 588-8572‬
             </p>
             <p style={{ fontSize: '1.33em', color: '#5e5c5c' }}>
+            ‪   <a href='https://github.com/nprutan'>https://github.com/nprutan</a>
+            </p>
+            <p style={{ fontSize: '1.33em', color: '#5e5c5c' }}>
                 Please feel free to reach out any time!
             </p>
         </Container>
