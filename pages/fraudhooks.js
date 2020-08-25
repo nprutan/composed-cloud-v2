@@ -205,7 +205,7 @@ const HomepageLayout = () => (
         <Grid.Row>
           <Grid.Column width={8}>
             <Header as='h3' style={{ fontSize: '2em', color: '#5e5c5c' }}>
-                <Icon name='cloudscale' size='large' /> Take Advantage Of Cloud Scale
+                <Icon name='cloudscale' size='large' /> Scale With The Cloud
             </Header>
             <p style={{ fontSize: '1.33em' }}>
                 FraudHooks uses a feature of Shopify called webhooks. 
