@@ -141,9 +141,9 @@ class MobileContainer extends Component {
             <Link href='/fraudhooks'>
                 <Menu.Item as='a' active>FraudHooks</Menu.Item>
             </Link>
-            <Link href='/hubmetrix'>
+            {/* <Link href='/hubmetrix'>
                 <Menu.Item as='a'>Hubmetrix</Menu.Item>
-            </Link>
+            </Link> */}
           </Sidebar>
 
           <Sidebar.Pusher dimmed={sidebarOpened}>
