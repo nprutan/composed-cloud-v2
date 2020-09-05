@@ -30,7 +30,7 @@ const { MediaContextProvider, Media } = createMedia({
  * components for such things.
  */
 const FraudHooksHeading = ({ mobile }) => (
-    <Image fluid verticalAlign='middle' src='/FraudHooks_banner_cropped.png'></Image>
+    <Image fluid verticalAlign='middle' src='/FraudHooks_banner_blue.png'></Image>
 )
 
 FraudHooksHeading.propTypes = {
